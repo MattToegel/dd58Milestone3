@@ -31,6 +31,7 @@ if($result = mysqli_query($link, $sql)){
         
         while($row = mysqli_fetch_array($result)){
            
+            //Get account id
                 $accountId = $row['account_id'];
                 $transactions_query = "SELECT * FROM transactions where accountSrc = $accountId ";
             if($result = mysqli_query($link, $transactions_query)){
